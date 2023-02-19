@@ -4,6 +4,7 @@ aside button {
     background-color: #27AE60;
     border-radius: 8px;
     border: none;
+    margin-right: 53px;
 }
 
 aside p {
@@ -19,17 +20,18 @@ aside {
         align-items: flex-end;
         justify-content: space-between;
         height: auto;
+        margin-top: 89px;
+        margin-left: 200px;
+       
 
 }
 
 
 img {
     width: 400px;
-    min-width: 50%;
-    margin-top: 89px;
     margin-right: 53px;
-    background-color: #FFFFFF;
     height: 466px;
+    margin: auto;
 }
 
 
@@ -42,6 +44,7 @@ img {
     flex-wrap: wrap;
     background-color: red;
     margin: auto;
+    margin-top: 70px;
     
 }
 .teclado{
@@ -64,11 +67,14 @@ img {
 
 
 .inicio{
-    background-color: blue;
+    max-width: 1100px;
+
+    display: flex;
+    margin: auto;
 
 }
 
 .forca{
-    background-color: red;
+    margin-top: 59px;
     width: 400px;
 }

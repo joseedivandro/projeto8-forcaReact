@@ -1,20 +1,12 @@
-
 import "../style/style.css"
 import forca0 from "./assets/forca0.png"
-
-export default function Jogo({imagemInicial, setImagemInicial}) {
-
-    function start(){
-        setImagemInicial(forca0)
-        
-    }
-
-    
+export default function Jogo() { 
     return (
         <div class="inicio">
-         <img class ="forca" src={imagemInicial}/>
+        
+         <img src={forca0}/>
             <aside>
-                <button onClick={start}>
+                <button >
                     <p>Escolher Palavra</p>
                 </button>
             </aside>
