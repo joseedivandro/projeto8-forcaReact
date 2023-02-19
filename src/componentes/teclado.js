@@ -17,10 +17,5 @@ import forca6 from "./assets/forca6.png"
 
 const EstiloDoBotao = styled.button`
 
-width: 40px;
-height: 40px;
-background: #9FAAB5;
-border: 1px solid #7AA7C7;
-border-radius: 3px;
 
 `;

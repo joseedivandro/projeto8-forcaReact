@@ -11,6 +11,7 @@ export default function App(){
         <main>
             
         <Jogo/>
+        <Letras/>
         </main>
        
         </>
