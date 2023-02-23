@@ -22,10 +22,10 @@ function start(){
         <div className="inicio">
          <img data-test="game-image"  src={imagemInicial} alt =""/>
             <aside>
-                <button onClick={start}>
+                <button data-test="choose-word" onClick={start}>
                     <h1>Escolher Palavra</h1>
                 </button>
-                <p  data-test="choose-word" 
+                <p  data-test="word" 
                        data-answer={palavraSorteada[0].naoEscondida}
                        
                     >
