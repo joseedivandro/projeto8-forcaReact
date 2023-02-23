@@ -1,6 +1,6 @@
 import "../style/style.css"
-import sortearPalavras from "../palavras/sortearPalavras"
-import palavras from "../palavras/palavras"
+import sortearPalavras from "../sortearPalavras"
+import palavras from "../palavras"
 import forca0 from "./assets/forca0.png"
 
 
