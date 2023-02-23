@@ -25,7 +25,7 @@ function start(){
                 <button onClick={start}>
                     <h1>Escolher Palavra</h1>
                 </button>
-                <p  data-test="word" 
+                <p  data-test="choose-word" 
                        data-answer={palavraSorteada[0].naoEscondida}
                        
                     >
