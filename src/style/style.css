@@ -7,11 +7,24 @@ aside button {
     margin-right: 53px;
 }
 
-aside p {
+aside h1 {
     font-family: 'Roboto';
     color: #FFFFFF;
     font-weight: 700;
     font-size: 20px;
+    
+}
+
+aside p{
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 68px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 20px;
 }
 
 aside {
@@ -77,4 +90,16 @@ img {
 .forca{
     margin-top: 59px;
     width: 400px;
+}
+
+.desativado{
+    color:#7a899e;
+    background: #9FAAB5;
+    border: 1px solid #7AA7C7;
+}
+.letrasEstilo{
+    display: flex;
+    max-width: 600px;
+    flex-wrap: wrap;
+    margin: auto;
 }

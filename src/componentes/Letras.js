@@ -1,53 +1,23 @@
 
-const alfabeto = [
-    { letra: 'A' },
-    { letra: 'B' },
-    { letra: 'C' },
-    { letra: 'D' },
-    { letra: 'E' },
-    { letra: 'F' },
-    { letra: 'G' },
-    { letra: 'H' },
-    { letra: 'I' },
-    { letra: 'J' },
-    { letra: 'K' },
-    { letra: 'L' },
-    { letra: 'M' },
-    { letra: 'N' },
-    { letra: 'O' },
-    { letra: 'P' },
-    { letra: 'Q' },
-    { letra: 'R' },
-    { letra: 'S' },
-    { letra: 'T' },
-    { letra: 'U' },
-    { letra: 'V' },
-    { letra: 'W' },
-    { letra: 'X' },
-    { letra: 'Y' },
-    { letra: 'Z' },
-];
-
-
-function Ordem(props) {
-    return (
-        
-        <div class="teclado"> {props.alfabeto.letra}</div>
-        
-    )
-}
-
-export default function Letras() {
-
-
-
-    return (
-
-        <div class="organiza">
-            {alfabeto.map((a) => (
-                <Ordem key={a.letra} alfabeto={a} />
-
-            ))}
+import BotaoLetra from "./teclado"
+export default function Letras({jogoEmAndamento, setjogoEmAndamento, palavraSorteada, setPalavraSorteada, numeroDeErros, setNumeroDeErros, setImagemDaForca, jogoFoiReiniciado, setChuteConteudo, setJogoFoiReiniciado, letrasChutadas, setLetrasChutadas, setUsuarioGanhou, setCorDoChute}) {
+    const alfabeto = ["A","B","C","D","E","F","G","H","I","J", "K","L","M","N","O","P","Q","R","S","T",
+                      "U","V","W","X","Y","Z"];                                      
+                      
+    return(
+        <>
+            <div className="letrasEstilo">
+                {alfabeto.map((letra) => {
+                    return (<BotaoLetra key={letra} 
+                                        letra={letra} 
+                                        jogoEmAndamento={jogoEmAndamento}
+                                        setjogoEmAndamento={setjogoEmAndamento}
+                                        palavraSorteada={palavraSorteada}
+                                        setPalavraSorteada={setPalavraSorteada}
+                                                 
+                                        />)
+                })}
             </div>
+        </>
     )
 }

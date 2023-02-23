@@ -1,21 +1,42 @@
+import {useState} from "react"
 import styled from "styled-components"
 
+export default function BotaoLetra({letra, jogoEmAndamento, setjogoEmAndamento, palavraSorteada, setPalavraSorteada, jogoFoiReiniciado}) {
 
-import forca0 from "./assets/forca0.png"
-import forca1 from "./assets/forca1.png"
-import forca2 from "./assets/forca2.png"
-import forca3 from "./assets/forca3.png"
-import forca4 from "./assets/forca4.png"
-import forca5 from "./assets/forca5.png"
-import forca6 from "./assets/forca6.png"
+    const [Clicado, setClicado] = useState(false)
+     
+    function fimDoGame() {
+        if(jogoFoiReiniciado) {
+            setClicado(false)
+        }
+        return true
+    }
 
+    return(
+            <FormatoBotao className={((!jogoEmAndamento || (Clicado?fimDoGame():false))?"botao-desativado":"")} 
+                          disabled={((!jogoEmAndamento || (Clicado?fimDoGame():false))?true:false)}
+                          data-test="letter"                                        
+            >
+                {letra}
+            </FormatoBotao>
+    )
+}
 
-
-
-
-
-
-const EstiloDoBotao = styled.button`
-
-
-`;
+const FormatoBotao = styled.button`
+    width: 40px;
+    height: 40px;
+    margin: 2px 2px;   
+  
+    font-size: 16px;
+    background: #E1ECF4;
+    font-weight: 700;
+    color: #39739D;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+    
+    &.botao-desativado {
+        background: #798A9F;
+        color: #6b7075;
+    }
+    
+    `;
