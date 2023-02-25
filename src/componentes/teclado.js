@@ -10,7 +10,7 @@ import forca6 from "./assets/forca6.png"
 
 
 
-export default function BotaoLetra({letra, JogoEmAndamento, setJogoEmAndamento, palavraEscolhida, setpalavraEscolhida, numeroDeErros, setNumeroDeErros, setImagemDaForca, letraEscolhida, setletraEscolhida, Restart,  setRestart}) {
+export default function BotaoLetra({letra, JogoEmAndamento, setJogoEmAndamento, palavraEscolhida, setpalavraEscolhida, numeroDeErros, setNumeroDeErros, setImagemDaForca, letraEscolhida, setletraEscolhida, Restart,  setRestart, setLetraFinal }) {
 
     const [Clicado, setClicado] = useState(false);
     const imagensdaForca = [
@@ -52,7 +52,7 @@ export default function BotaoLetra({letra, JogoEmAndamento, setJogoEmAndamento, 
             if(palavraLength === palavraEscolhida[0].naoEscondida) {
                 setJogoEmAndamento(false)
                 setletraEscolhida([]) 
-               
+                setLetraFinal('#27AE60')
                
             }
 
@@ -78,7 +78,7 @@ export default function BotaoLetra({letra, JogoEmAndamento, setJogoEmAndamento, 
             setpalavraEscolhida(formatapalavraLength(palavraEscolhida[0].naoEscondida))
             setJogoEmAndamento(false)
             setletraEscolhida([]) 
-           
+            setLetraFinal('#FF0000')
             
             
            

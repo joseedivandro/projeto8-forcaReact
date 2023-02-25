@@ -18,7 +18,7 @@ export default function App() {
     )
     const [JogoEmAndamento, setJogoEmAndamento] = useState(false)
     const [letraEscolhida, setletraEscolhida] = useState([])
-    
+    const [letraFinal, setLetraFInal] = useState('')
     const [Restart, setRestart] = useState(false)
 
 
@@ -37,6 +37,8 @@ export default function App() {
                     setRestart={setRestart}
                     
                     setletraEscolhida={setletraEscolhida}
+                    letraFinal={letraFinal}
+                    setLetraFinal={setLetraFInal}
                     
 
                 />
@@ -52,7 +54,10 @@ export default function App() {
                     
                     setRestart={setRestart}
                     letraEscolhida={letraEscolhida}
+                    
                     setletraEscolhida={setletraEscolhida}
+                    letraFinal={letraFinal}
+                    setLetraFinal={setLetraFInal}
                    
                 />
             </main>

@@ -2,10 +2,11 @@ import "../style/style.css"
 import sortearPalavras from "../sortearPalavras"
 import palavras from "../palavras"
 import forca0 from "./assets/forca0.png"
+import styled from "styled-components"
 
 
 
-export default function Jogo({ImagemDaForca, setImagemDaForca,palavraEscolhida,setNumeroDeErros,  setpalavraEscolhida,JogoEmAndamento, setJogoEmAndamento, setRestart, setletraEscolhida}) { 
+export default function Jogo({ImagemDaForca, setImagemDaForca,palavraEscolhida,setNumeroDeErros,  setpalavraEscolhida,JogoEmAndamento, setJogoEmAndamento, setRestart, setletraEscolhida, setLetraFinal, letraFinal}) { 
 
 function start(){
 
@@ -15,6 +16,8 @@ function start(){
     setNumeroDeErros(0)
     setRestart(true)  
     setletraEscolhida([]) 
+    setLetraFinal('')
+    
               
         }
 
@@ -29,15 +32,24 @@ function start(){
                 <button data-test="choose-word" onClick={start}>
                     <h1>Escolher Palavra</h1>
                 </button>
+
+                <Palavra>
                 <p  data-test="word" 
                        data-answer={palavraEscolhida[0].naoEscondida}
-                       
+                       style={{color:letraFinal}}
                     >
                         {palavraEscolhida[0].escondida}
                     </p>
+                    </Palavra>
                
             </aside>
             </div>
            
     )
 }
+
+
+const Palavra = styled.div `
+
+color: if()
+`

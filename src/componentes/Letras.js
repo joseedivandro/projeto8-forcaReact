@@ -1,6 +1,6 @@
 
 import BotaoLetra from "./teclado"
-export default function Letras({JogoEmAndamento, setJogoEmAndamento, palavraEscolhida, setpalavraEscolhida, numeroDeErros, setNumeroDeErros, setImagemDaForca, Restart,  setRestart, letraEscolhida, setletraEscolhida}) {
+export default function Letras({JogoEmAndamento, setJogoEmAndamento, palavraEscolhida, setpalavraEscolhida, numeroDeErros, setNumeroDeErros, setImagemDaForca, Restart,  setRestart, letraEscolhida, setletraEscolhida, setLetraFinal}) {
     const alfabeto = ["A","B","C","D","E","F","G","H","I","J", "K","L","M","N","O","P","Q","R","S","T",
                       "U","V","W","X","Y","Z"];                                      
                       
@@ -20,7 +20,7 @@ export default function Letras({JogoEmAndamento, setJogoEmAndamento, palavraEsco
                                         letraEscolhida={letraEscolhida}
                                         setletraEscolhida={setletraEscolhida}
                                         Restart={Restart}
-                                
+                                        setLetraFinal={setLetraFinal}
                                         setRestart={setRestart}
                                        
                                         
