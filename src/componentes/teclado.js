@@ -47,7 +47,7 @@ export default function BotaoLetra({letra, JogoEmAndamento, setJogoEmAndamento, 
                 }
                 return letra
             })
-            palavraLength = palavraLength.join('') // converts array to string
+            palavraLength = palavraLength.join('') 
             
             if(palavraLength === palavraEscolhida[0].naoEscondida) {
                 setJogoEmAndamento(false)
@@ -110,9 +110,10 @@ export default function BotaoLetra({letra, JogoEmAndamento, setJogoEmAndamento, 
 }
 
 const StyledButton = styled.button`
+box-sizing: border-box;
     width: 40px;
     height: 40px;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 16px;
     background: #E1ECF4;
     border: 1px solid #7AA7C7 !important;

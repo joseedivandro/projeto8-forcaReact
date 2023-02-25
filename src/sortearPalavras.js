@@ -1,7 +1,7 @@
 export default function sortearPalavras(palavras) {
-    const indiceDasPalavrasOriginais = [...palavras.keys()];
-    const indiceDasPalavrasSorteadas = shuffle(indiceDasPalavrasOriginais);
-    const primeiraPalavra = palavras[indiceDasPalavrasSorteadas[0]];
+    const indexOriginal = [...palavras.keys()];
+    const indexSorteado = shuffle(indexOriginal);
+    const primeiraPalavra = palavras[indexSorteado[0]];
   
     return [{
       naoEscondida: primeiraPalavra,

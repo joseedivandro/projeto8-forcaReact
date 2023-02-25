@@ -1,7 +1,5 @@
 import { useState } from "react"
 import forca0 from "../src/componentes/assets/forca0.png"
-
-
 import Jogo from "./componentes/Jogo"
 import Letras from "./componentes/Letras"
 
@@ -35,7 +33,6 @@ export default function App() {
                     setJogoEmAndamento={setJogoEmAndamento}
                     setNumeroDeErros={setNumeroDeErros}
                     setRestart={setRestart}
-                    
                     setletraEscolhida={setletraEscolhida}
                     letraFinal={letraFinal}
                     setLetraFinal={setLetraFInal}
@@ -50,11 +47,9 @@ export default function App() {
                     setImagemDaForca={setImagemDaForca}
                     numeroDeErros={numeroDeErros}
                     setNumeroDeErros={setNumeroDeErros}
-                    Restart={Restart}
-                    
+                    Restart={Restart} 
                     setRestart={setRestart}
                     letraEscolhida={letraEscolhida}
-                    
                     setletraEscolhida={setletraEscolhida}
                     letraFinal={letraFinal}
                     setLetraFinal={setLetraFInal}

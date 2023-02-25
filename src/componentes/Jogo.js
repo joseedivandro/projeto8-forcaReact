@@ -21,7 +21,7 @@ function start(){
               
         }
 
-        console.log(palavraEscolhida[0].naoEscondida)
+       
 
     return (
 
@@ -51,5 +51,5 @@ function start(){
 
 const Palavra = styled.div `
 
-color: if()
+
 `
