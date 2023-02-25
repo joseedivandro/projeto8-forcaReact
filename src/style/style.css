@@ -103,3 +103,12 @@ img {
     flex-wrap: wrap;
     margin: auto;
 }
+
+.red{
+
+    color: red;
+}
+
+.green{
+    color: green;
+}

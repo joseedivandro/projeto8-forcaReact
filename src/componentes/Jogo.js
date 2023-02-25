@@ -5,31 +5,35 @@ import forca0 from "./assets/forca0.png"
 
 
 
-export default function Jogo({imagemInicial, setimagemInicial,palavraSorteada,  setPalavraSorteada,jogoEmAndamento, setjogoEmAndamento}) { 
+export default function Jogo({ImagemDaForca, setImagemDaForca,palavraEscolhida,setNumeroDeErros,  setpalavraEscolhida,JogoEmAndamento, setJogoEmAndamento, setRestart, setletraEscolhida}) { 
 
 function start(){
 
-    setimagemInicial(forca0)
-    setPalavraSorteada(sortearPalavras(palavras))
-    setjogoEmAndamento(true)
-    
+    setImagemDaForca(forca0)
+    setpalavraEscolhida(sortearPalavras(palavras))
+    setJogoEmAndamento(true)
+    setNumeroDeErros(0)
+    setRestart(true)  
+    setletraEscolhida([]) 
               
         }
+
+        console.log(palavraEscolhida[0].naoEscondida)
 
     return (
 
         
         <div className="inicio">
-         <img data-test="game-image"  src={imagemInicial} alt =""/>
+         <img data-test="game-image"  src={ImagemDaForca} alt =""/>
             <aside>
                 <button data-test="choose-word" onClick={start}>
                     <h1>Escolher Palavra</h1>
                 </button>
                 <p  data-test="word" 
-                       data-answer={palavraSorteada[0].naoEscondida}
+                       data-answer={palavraEscolhida[0].naoEscondida}
                        
                     >
-                        {palavraSorteada[0].escondida}
+                        {palavraEscolhida[0].escondida}
                     </p>
                
             </aside>

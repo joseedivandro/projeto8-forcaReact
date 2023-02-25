@@ -7,40 +7,56 @@ import Letras from "./componentes/Letras"
 
 
 
+
 export default function App() {
-    
-    const [imagemInicial, setimagemInicial] = useState(forca0)
-    const [palavraSorteada, setPalavraSorteada] = useState([{
+    const [numeroDeErros, setNumeroDeErros] = useState(0)
+    const [ImagemDaForca, setImagemDaForca] = useState(forca0)
+    const [palavraEscolhida, setpalavraEscolhida] = useState([{
         naoEscondida: '________',
         escondida: '________'
     }]
     )
-    const [jogoEmAndamento, setjogoEmAndamento] = useState(false)
-   
-     
+    const [JogoEmAndamento, setJogoEmAndamento] = useState(false)
+    const [letraEscolhida, setletraEscolhida] = useState([])
+    
+    const [Restart, setRestart] = useState(false)
+
+
     return (
         <>
             <main>
 
                 <Jogo
-                    imagemInicial={imagemInicial}
-                    setimagemInicial={setimagemInicial}
-                    palavraSorteada={palavraSorteada}
-                    setPalavraSorteada={setPalavraSorteada}
-                    jogoEmAndamento={jogoEmAndamento}
-                    setjogoEmAndamento={setjogoEmAndamento}  
+                    ImagemDaForca={ImagemDaForca}
+                    setImagemDaForca={setImagemDaForca}
+                    palavraEscolhida={palavraEscolhida}
+                    setpalavraEscolhida={setpalavraEscolhida}
+                    JogoEmAndamento={JogoEmAndamento}
+                    setJogoEmAndamento={setJogoEmAndamento}
+                    setNumeroDeErros={setNumeroDeErros}
+                    setRestart={setRestart}
                     
+                    setletraEscolhida={setletraEscolhida}
+                    
+
                 />
                 <Letras
-                    jogoEmAndamento={jogoEmAndamento}
-                    setjogoEmAndamento={setjogoEmAndamento}
-                    setPalavraSorteada={setPalavraSorteada}
-                    setimagemInicial={setimagemInicial}
-                   
+                    JogoEmAndamento={JogoEmAndamento}
+                    setJogoEmAndamento={setJogoEmAndamento}
+                    palavraEscolhida={palavraEscolhida}  
+                    setpalavraEscolhida={setpalavraEscolhida}
+                    setImagemDaForca={setImagemDaForca}
+                    numeroDeErros={numeroDeErros}
+                    setNumeroDeErros={setNumeroDeErros}
+                    Restart={Restart}
+                    
+                    setRestart={setRestart}
+                    letraEscolhida={letraEscolhida}
+                    setletraEscolhida={setletraEscolhida}
                    
                 />
             </main>
 
         </>
-    )
+    );
 }

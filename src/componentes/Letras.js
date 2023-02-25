@@ -1,6 +1,6 @@
 
 import BotaoLetra from "./teclado"
-export default function Letras({jogoEmAndamento, setjogoEmAndamento, palavraSorteada, setPalavraSorteada, numeroDeErros, setNumeroDeErros, setImagemDaForca, jogoFoiReiniciado, setChuteConteudo, setJogoFoiReiniciado, letrasChutadas, setLetrasChutadas, setUsuarioGanhou, setCorDoChute}) {
+export default function Letras({JogoEmAndamento, setJogoEmAndamento, palavraEscolhida, setpalavraEscolhida, numeroDeErros, setNumeroDeErros, setImagemDaForca, Restart,  setRestart, letraEscolhida, setletraEscolhida}) {
     const alfabeto = ["A","B","C","D","E","F","G","H","I","J", "K","L","M","N","O","P","Q","R","S","T",
                       "U","V","W","X","Y","Z"];                                      
                       
@@ -10,10 +10,20 @@ export default function Letras({jogoEmAndamento, setjogoEmAndamento, palavraSort
                 {alfabeto.map((letra) => {
                     return (<BotaoLetra key={letra} 
                                         letra={letra} 
-                                        jogoEmAndamento={jogoEmAndamento}
-                                        setjogoEmAndamento={setjogoEmAndamento}
-                                        palavraSorteada={palavraSorteada}
-                                        setPalavraSorteada={setPalavraSorteada}
+                                        JogoEmAndamento={JogoEmAndamento}
+                                        setJogoEmAndamento={setJogoEmAndamento}
+                                        palavraEscolhida={palavraEscolhida}
+                                        setpalavraEscolhida={setpalavraEscolhida}
+                                        numeroDeErros={numeroDeErros}
+                                        setNumeroDeErros={setNumeroDeErros}
+                                        setImagemDaForca={setImagemDaForca}
+                                        letraEscolhida={letraEscolhida}
+                                        setletraEscolhida={setletraEscolhida}
+                                        Restart={Restart}
+                                
+                                        setRestart={setRestart}
+                                       
+                                        
                                                  
                                         />)
                 })}
