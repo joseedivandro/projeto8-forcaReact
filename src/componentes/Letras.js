@@ -21,9 +21,7 @@ export default function Letras({JogoEmAndamento, setJogoEmAndamento, palavraEsco
                                         setletraEscolhida={setletraEscolhida}
                                         Restart={Restart}
                                         setLetraFinal={setLetraFinal}
-                                        setRestart={setRestart}
-                                       
-                                        
+                                        setRestart={setRestart} 
                                                  
                                         />)
                 })}

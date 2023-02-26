@@ -28,7 +28,7 @@ export default function BotaoLetra({letra, JogoEmAndamento, setJogoEmAndamento, 
         setRestart(false)
 
         if(letraEscolhida.includes(letra)) {
-            return
+            return;
         }
 
         setletraEscolhida([...letraEscolhida, letra])
@@ -36,7 +36,7 @@ export default function BotaoLetra({letra, JogoEmAndamento, setJogoEmAndamento, 
         const palavraEscolhidaNaoEscondida = Array.from(palavraEscolhida[0].naoEscondida)
         const letraParaComparar = letra.toLowerCase()
 
-        setClicado(true)
+        setClicado(true);
         
         if(palavraEscolhidaNaoEscondida.includes(letraParaComparar)) {
             let palavraLength = [...Array.from(palavraEscolhida[0].escondida)]
@@ -99,17 +99,19 @@ export default function BotaoLetra({letra, JogoEmAndamento, setJogoEmAndamento, 
     }
 
     return(
-            <StyledButton className={((!JogoEmAndamento || (Clicado?fimDoJogo():false))?"botao-desativado":"")} 
-                          disabled={((!JogoEmAndamento || (Clicado?fimDoJogo():false))?true:false)}
-                          onClick={(() => verificaChute())}
-                          data-test="letter"                                        
-            >
-                {letra}
-            </StyledButton>
+        
+        <FormatoBotao 
+        className={!JogoEmAndamento || (Clicado && fimDoJogo()) ? 'botao-desativado' : ''} 
+        disabled={!JogoEmAndamento || (Clicado && fimDoJogo())}
+        onClick={() => verificaChute()}
+        data-test="letter"
+      >
+        {letra}
+      </FormatoBotao>
     )
 }
 
-const StyledButton = styled.button`
+const FormatoBotao = styled.button`
 box-sizing: border-box;
     width: 40px;
     height: 40px;

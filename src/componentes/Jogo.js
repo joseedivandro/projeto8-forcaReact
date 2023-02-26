@@ -16,9 +16,7 @@ function start(){
     setNumeroDeErros(0)
     setRestart(true)  
     setletraEscolhida([]) 
-    setLetraFinal('')
-    
-              
+    setLetraFinal('')           
         }
 
        
